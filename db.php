@@ -9,4 +9,8 @@ $active_group = 'default';
 $query_builder = TRUE;
 // Connect to DB
 $conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $cleardb_db);
+
+
+$encodedData = file_get_contents('php://input');  // take data from react native fetch API
+$decodedData = json_decode($encodedData, true);
 ?>
